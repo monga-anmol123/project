@@ -33,10 +33,7 @@ window.onload = function(){
 
           }
 
-          upbtn.onclick = function(event){
-                li.parentElement.insertBefore( li, li.previousElementSibling);
-          }
-
+        
 
          show.appendChild(li);   
     }
