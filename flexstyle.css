@@ -1,0 +1,30 @@
+.container{
+    background-color: teal;
+
+    display: flex;
+
+    height: 400px;
+    width: 400px;
+    flex-wrap:wrap;
+    flex-direction:row;
+    margin: 10px;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+    align-content:center ;
+
+    /* align-content:flex-start; */
+}
+
+.item{
+
+    background-color: yellow;
+    border: crimson solid 2px;
+    margin: 10px ;
+    height: 50px;
+    width: 50px;
+    font-size: 20pt;
+
+}

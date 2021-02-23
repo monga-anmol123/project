@@ -1,0 +1,83 @@
+*{
+    background-color: black;
+}
+body{
+    color: coral;
+}
+#one:hover>  ul{
+    background-color: darkcyan;
+    display: block;
+  
+}
+#two:hover > ul  {
+
+    background-color: darkcyan;
+    display: block;
+  
+}
+#next:hover >ol{
+    background-color: darkorchid;
+    display: block;
+}
+
+    .blank {
+    display: none;
+    }
+
+    .btn
+    {   margin-top: 20px;
+        font-size: 30px;
+        color: darkgreen;
+        padding: 20px;
+        height: 80px  !important;
+        width: 90px  !important;
+
+        border-radius: 10%;
+        box-shadow: grey 10px 10px 5px;
+        background-color: deeppink;
+        border: black solid 2px ;
+        transition: 0.9s;
+    }
+
+    .btn:hover{
+        background-color: greenyellow;
+        color: skyblue;
+        box-shadow: tomato 5px 2px 70px;
+        transform: translate(-10px, -10px);
+        
+    }
+
+ .bigbox{
+        background-color: darkgreen;
+        height: 600px;
+        width: 600px;
+        margin: auto;
+    }
+
+    .smallbox
+        {margin: 15px;
+        height:70px;
+        width: 70px;
+        background-color: cornflowerblue;
+        display: inline-block;
+
+        animation: bounce 2s ;
+        border: peru dotted 5px ;
+        animation-iteration-count: infinite;
+    }
+    .one{
+        animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
+    }
+
+    @keyframes bounce{
+        0%{
+
+        }
+        50%
+        {
+            transform: translateY(500px);
+        }
+        /* 100%{
+            transform: translateY(500px);
+        } */
+    }

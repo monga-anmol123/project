@@ -1,46 +1,49 @@
-window.onload = function(){
+// window.onload = function(){
 
-    let task= document.getElementById("task");
+//     let task= document.getElementById("task");
 
-    let add = document.getElementById("addtask");
+//     let add = document.getElementById("addtask");
 
-    let show = document.getElementById("list");
+//     let show = document.getElementById("list");
 
 
-    add.onclick = function() {
-        let li= document.createElement('li');
-        let p= task.value;
+//     add.onclick = function() {
+//         let li= document.createElement('li');
+//         let p= task.value;
 
-        li.innerHTML = p;
+//         li.innerHTML = p;
 
-        let xbtn = document.createElement('button')
-        xbtn.innerText="X";
-        xbtn.id="btn";
+//         let xbtn = document.createElement('button')
+//         xbtn.innerText="X";
+//         xbtn.id="btn";
 
-        let upbtn = document.createElement('button');
+//         let upbtn = document.createElement('button');
 
-        upbtn.innerText = '\u{2B06}'; 
+//         upbtn.innerText = '\u{2B06}'; 
         
-        li.appendChild(xbtn);
-        li.appendChild(upbtn);
+//         li.appendChild(xbtn);
+//         li.appendChild(upbtn);
 
-        xbtn.onclick= function (event) {
+//         xbtn.onclick= function (event) {
             
-            console.log(event.target.parentElement);
-            let li=event.target.parentElement;
+//             console.log(event.target.parentElement);
+//             let li=event.target.parentElement;
 
-            li.remove();
+//             li.remove();
 
-          }
+//           }
 
-        
+//           upbtn.onclick = function(event){
+//                 li.parentElement.insertBefore( li, li.previousElementSibling);
+//           }
 
-         show.appendChild(li);   
-    }
+
+//          show.appendChild(li);   
+//     }
 
     
 
 
 
 
-}
+// }
