@@ -1,47 +1,40 @@
-const col = [ " green" , "blue" , "orange" , "yellow"]; 
+let count = 0;
 
-function selectone() {
-    let v =col[Math.floor(Math.random() * col.length)]
-    document.getElementById("target").style.backgroundColor = v ;
-    document.getElementById("change").innerText= v;
-}
-function getRandomColor() {
-    var letters = '0123456789ABCDEF';
-    var color = '#';
-    for (var i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-  }
+let p = document.querySelectorAll(".btn");
+let k = document.getElementById("val");
 
-  function selectonehex() {
-    let v = getRandomColor();
-    document.getElementById("target").style.backgroundColor = v ;
-    document.getElementById("change").innerText= v;
-}
 
-function hexToRGB(h) {
-    let r = 0, g = 0, b = 0;
-  
-    // 3 digits
-    if (h.length == 4) {
-      r = "0x" + h[1] + h[1];
-      g = "0x" + h[2] + h[2];
-      b = "0x" + h[3] + h[3];
-  
-    // 6 digits
-    } else if (h.length == 7) {
-      r = "0x" + h[1] + h[2];
-      g = "0x" + h[3] + h[4];
-      b = "0x" + h[5] + h[6];
-    }
+
+
+p.forEach(function(item){
+    console.log(item);
+    // item.addEventListner("click" , function(){
+    //     console.log("hello");
+    // })
+
+    item.addEventListener("click" , function(e){
+        if(e.target.classList.contains('inc'))
+            {count++;
+            }
+        
+     if(e.target.classList.contains('dec'))
+            { count--;
+
+            }
+    if(e.target.classList.contains('res'))
+            {
+                count=0;
+            }     
     
-    return "RGB("+ +r + "," + +g + "," + +b + ")";
-  }
+            k.textContent = count;
+    if(count<0)
+        k.style.color="red";
+    if(count>=0)
+            k.style.color="green";
+        }) ; 
 
-function selectonesimp() {
-    let v = getRandomColor();
-    let p = hexToRGB(v);    
-    document.getElementById("target").style.backgroundColor = v ;
-    document.getElementById("change").innerText= p;
-}
+
+
+
+
+});
